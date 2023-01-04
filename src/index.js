@@ -7,7 +7,7 @@ function language(form) {
             If you travel accompanied and how often you travel. <br>
             I am a Backend Developer so on this site I highlight more
             the <b>HTML</b> and the <b>JavaScript</b>, the back-end is done with <b>Python-Django</b>. <br>
-            <b>Simple, but worth trying.</b>
+            <b>Simple, but worth to the test.</b>
     `;
   }
   if (form === "spanish") {
