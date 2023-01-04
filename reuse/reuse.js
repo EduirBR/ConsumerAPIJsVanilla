@@ -5,7 +5,6 @@ class headerplus extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
     <header id="main-header">
-    <link rel="stylesheet" href="../reuse/reuse.css">
     <a id="logo-header" href="https://github.com/EduirBR">
     <span class="site-name">Eduir Brazon "Ruingin"</span>
     <span class="site-desc">Api Travels Likes</span>
@@ -13,7 +12,7 @@ class headerplus extends HTMLElement {
 
 <nav>
     <ul>
-        <li><a href="#">Inicio</a></li>
+        <li><a href="../index.html">Inicio</a></li>
         <li><a href="../get/get.html">GET</a></li>
         <li><a href="../post/post.html">POST</a></li>
         <li><a href="../reuse/contact.html">Contacto</a></li>

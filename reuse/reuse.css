@@ -8,7 +8,13 @@ body {
 	line-height: 1.5em;
     height: 100vh;
 }
+#home{
+margin-top: 10%;
+margin-left: 20%;	
+margin-right: 20%;
+}
 #maindiv{
+	align-self: center;
     height: 90%;
 }
 #contact td {
@@ -24,7 +30,7 @@ h1 {
 }
 
 p {
-	margin: 0 0 1.5em 0;
+	margin: 0 0 1.5em 1.5em;
 }
 
 img {
