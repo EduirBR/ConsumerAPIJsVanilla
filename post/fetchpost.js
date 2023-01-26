@@ -1,5 +1,53 @@
-form = document.getElementById("form");
+var cont = 0;
+const country = async () => {
+  try {
+    const countr = await fetch("http://localhost:8000/countries/HTML");
+    if (countr.status == 200) {
+      const Cresponse = await countr.json();
+      var innHTML = "";
 
+      for (item of Cresponse) {
+        innHTML += `<option value="${item["uuid"]}">${item["name"]}</option>`;
+      }
+      document.getElementById("countryf").innerHTML = `
+    <select id="country" name="country">
+  ${innHTML}
+</select>
+    `;
+    }
+  } catch (error) {
+    console.log(error);
+    cont++;
+  }
+};
+country();
+
+const biome = async () => {
+  try {
+    const countr = await fetch("http://localhost:8000/biome/");
+    if (countr.status == 200) {
+      const Cresponse = await countr.json();
+      var innHTML = "";
+
+      for (item of Cresponse) {
+        innHTML += `<option value="${item["name"]}">${item["name"]}</option>`;
+      }
+      document.getElementById("biome").innerHTML = `
+                      <select name="biomes">
+                        ${innHTML}
+                      </select>`;
+    }
+  } catch (error) {
+    console.log(error);
+    cont++;
+  }
+};
+biome();
+if (cont > 0) {
+  console.log(cont);
+  document.getElementById("summit");
+}
+form = document.getElementById("form");
 const fun2 = async () => {
   if (form.name.value == "" || form.lastname.value == "") {
     alert("El espacio no puede ir en blanco");

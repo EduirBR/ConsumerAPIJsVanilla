@@ -34,6 +34,8 @@ const Fun1 = async () => {
     }
     return reply;
   } catch (error) {
+    document.getElementById("results").innerHTML = `
+    <h1> Error connecting with API<h1/>`;
     console.log(error);
   }
 };
